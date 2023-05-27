@@ -25,4 +25,5 @@ services:
     volumes:
       - 'db-data:/var/lib/postgresql/data'
     environment:
-      POSTGRES_PASSWORD: 'postgres'  # スーパーユーザーのパスワードを設定
+      - 'POSTGRES_HOST_AUTH_HETHOD=trust'
+      # POSTGRES_PASSWORD: 'postgres'  # スーパーユーザーのパスワードを設定
